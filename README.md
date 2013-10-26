@@ -1,3 +1,7 @@
+# 슈퍼개발자 K 시즌2 발표자료
+
+# 해당 자료는 reveal.js로 만들었습니다. 아래는 reveal.js의 내용입니다.
+
 # reveal.js [![Build Status](https://travis-ci.org/hakimel/reveal.js.png?branch=master)](https://travis-ci.org/hakimel/reveal.js)
 
 A framework for easily creating beautiful presentations using HTML. [Check out the live demo](http://lab.hakim.se/reveal-js/).
