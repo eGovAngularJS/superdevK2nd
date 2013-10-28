@@ -47,7 +47,7 @@ var RevealNotes = (function() {
 				nextindexv : nextindexv,
 				markdown : notes ? typeof notes.getAttribute( 'data-markdown' ) === 'string' : false
 			};
-
+			
 			notesPopup.postMessage( JSON.stringify( messageData ), '*' );
 		}
 

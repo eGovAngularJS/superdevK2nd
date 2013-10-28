@@ -34,39 +34,42 @@
 				<section>
 					<h1><span class="blue">eGov</span>AngularJS</h1>
 					<h3>UI 개발을 쉽게</h3>
+					<br>
 					<p>
-						<a href="http://egov.angularjs.or.kr">그루그루팀</a>
+						<a href="https://plus.google.com/111326406112009421991">고재도</a>@<a href="http://egov.angularjs.or.kr">그루그루팀</a>
 					</p>
 				</section>
-				<section>
-					<!-- 2% 부족할 때 사진 (egovAngularJS 로고로 넣는다.) -->
-					<h3>표준프레임워크에 2% 부족함을 채우다.</h3>
-				</section>
+
 				<!-- 전자정부 프레임워크를 사용하면서 갈증을 느끼지 않으셨습니다? UI 갈증을 느끼지 않으 셨어요? 저희 팀은 여러분들의 이러한 갈증을 해소하고자 eGovAngularJS를 시작하였습니다. -->
 				<section>
+					<h3>표준프레임워크에 2% 부족함을 채우다.</h3>
+					<img src="images/2percent-1.png">
+				</section>
+				<section>
 					<section>					
-						<a href="http://localhost:8080/guru/" target="_blank">
+						<a style="float:left" href="http://localhost:8080/guru/" target="_blank">
 							<img src="images/image1.png" alt="Unicorn">
 						</a>
+						<h5 style="float:right; margin-top: 300px; width: 40%;">http://14.63.199.244:8080/guruguru/</h5>	
 					</section>
 					<!-- 보시는 사진은 서버관리 대시보드입니다. 아래 주소로 접속하면 실제 접속하여 보실 수 있으십니다. 이러한 대시보드 UI를 개발하려면 어느정도 시간이 걸릴가요? 기준 데이터를 바꾸면 아래 그래프 위젯의 데이터 테이블의 데이터가 동적으로 바뀝니다. -->
 					<section>
-							고객이 요구사항내고 개발자 미치는 사진?
+						<h3>ActiveX 기술 없이 모든 브라우저 동작?!</h3>
+						<img src="images/stress.png">
 						<!--
 						 앞에서 본 그러한 대시보드를 ActiveX 기술 없이 모든 브라우저에서 동작하는 UI로 개발해야 한다면요? 돈이 없어서 UI 솔루션을 살 돈도 없다면요? -->
-						
 					</section>
 					<section>
-						no money, no life 사진
+						<h2>UI 솔루션 살 돈도 없다?!</h2>
+						<!-- <img src="images/no-money-no-life.png"> -->
+						<img src="images/nomoney.jpg">
 						 <!-- 제 저희는 돈도 없고 인생도 없는 개발자입니다. -->
 					</section>
 					<section>
-						고객이 요구사항내고 개발자 미치는 사진?
+						<h2>매번 다른 말을 하는 고객?!</h2>
+						<img src="images/customer-too-much-ask.png">
 						<!--
 						 근데 이게 다가 아니죠 진상 고객이 이래라 저래라 요구사항을 계속 바꾼다면요? 디자이너가 화면을 새로 그리고 html 소스가 바뀌고 javascript 소스 코드가 바뀌고 또 계속적으로 기능이 많아 진다면 소스 코드량이 얼마나 많아질까요? -->
-					</section>
-					<section>
-						많은 코드량에 짖눌리는 사진?
 					</section>
 				</section>
 				<section>
@@ -78,13 +81,10 @@
 								<h3>요구사항의 변경이 심하다!</h3>
 							</li>
 							<li>
-								<h3>요구사항의 변경이 심하다!</h3>
+								<h3>개발자 vs 기획자 vs 디자이너는 맨날 싸운다!</h3>
 							</li>
 							<li>
-								<h3>개발자와 디자이너는 맨날 싸운다!</h3>
-							</li>
-							<li>
-								<h3>기능이 많아 질 수록 코드가 난잡하다!</h3>
+								<h3>기능이 많아 질 수록 코드가 복잡하다!</h3>
 							</li>
 						</ul>
 					</section>
@@ -95,7 +95,8 @@
 
 				<section>
 					<section>
-						<h1>eGovAngularJS</h1>
+						<h1><span class="blue">eGov</span>AngularJS</h1>
+						<h1></h1>
 					</section>
 					<section>
 						<a href="http://localhost:8001/doc/"></a>
@@ -144,8 +145,7 @@
   <table>
     <thead>
       <tr>
-        <th>이름</th>
-        <th>이메일</th>
+        <th>이름</th> <th>이메일</th>
         <th>등록일</th>
       </tr>
     </thead>
@@ -165,24 +165,29 @@
 						<h5>(javascript)</h5>
 						<pre>
 							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-								function demoCtrl ($scope) {
-    $scope.userList = [{
-          id : "haibane",
-          name : "재도",
-          email : "haibane@gmail.com",
-          regDate : "20130910"
-        },{
-          id : "jeaha",
-          name : "재하",
-          email : "jeaha@gmail.com",
-          regDate : "20130910"
-        },{
-          id : "jisu",
-          name : "지수",
-          email : "jisu@gmail.com",
-          regDate : "20130910"
-        }];
-   }
+function demoCtrl ($scope) {
+	$scope.userList = [{
+	    id: "haibane",
+	    name: "재도",
+	    email: "haibane@gmail.com",
+	    regDate: "20130910"
+	}, {
+	    id: "jeaha",
+	    name: "재하",
+	    email: "jeaha@gmail.com",
+	    regDate: "20130910"
+	}, {
+	    id: "jisu",
+	    name: "지수",
+	    email: "jisu@gmail.com",
+	    regDate: "20130910"
+	}, {
+	    id: "hanhang",
+	    name: "한행",
+	    email: "hanhang@gmail.com",
+	    regDate: "20130910"
+	}];
+}
 							</code>
 						</pre>
 					</section>
@@ -218,14 +223,19 @@
 		
 					 -->
 					 <!-- 테스트 시나리오 1 -->
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 
+					 </code>
+					</pre>
 					 <!-- 테스트 시나리오 2 -->
 					 <!-- 카르마 테스트 -->
 					 <!-- 이렇게 테스트가 실행되게 됩니다. 이러한 테스트를 젠킨스에 연동하여 CI또한 구성이 가능합니다. 이러한 내용을 저희 개발자 사이트에 작성을 해놓았습니니다. 바로 집에가셔서 적용해보실 수 있으십니다. -->
 				</section>
 				<section>
+					<img src="images/iwantyou.gif">
 					<h1>I want your code!</h1>
-					<a href="">github</a>
+					<a href="https://github.com/eGovAngularJS">https://github.com/eGovAngularJS</a>
 					<!-- i want you 사진 -->
 					<!-- 네 마지막으로 한마디만 더하겠습니다. 저희는 오픈소스 프로젝트 입니다. 모든 소스는 깃헙에 올라 가있습니다. 그러니 누구든 참여가 가능합니다. 네 저희는 여러분들의 도음이 필요합니다. 같이 함께 만들어 봐요! -->
 				</section> 
