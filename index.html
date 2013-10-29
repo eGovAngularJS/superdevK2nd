@@ -1,21 +1,19 @@
 <!doctype html>
-<html lang="en">
-
+<html>
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>eGovAngularJS - 슈퍼개발자K 시즌2</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
-
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+		<link rel="stylesheet" href="css/super.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -31,353 +29,447 @@
 	</head>
 
 	<body>
-
 		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
+					<h1><span class="blue">eGov</span>AngularJS</h1>
+					<h3>UI 개발을 쉽게</h3>
+					<br>
 					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
+						<a href="https://plus.google.com/111326406112009421991">고재도</a>@<a href="http://egov.angularjs.or.kr">그루그루팀</a>
 					</p>
 				</section>
 
+				<!-- 전자정부 프레임워크를 사용하면서 몬가 2% 부족함을 느끼지 않으셨습니다? UI의 갈증을 느끼지 않으 셨어요? 저희 팀은 여러분들의 이러한 갈증을 해소하고자 eGovAngularJS를 시작하였습니다. -->
 				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
+					<h3>표준프레임워크에 2% 부족함을 채우다.</h3>
+					<img src="images/2percent-1.png">
 				</section>
-
-				<!-- Example of nested vertical slides -->
+				<section>
+					<section>					
+						<a style="float:left" href="http://14.63.199.244:8080/guruguru/" target="_blank" style="width:600px">
+							<img src="images/dashboard.png" alt="Unicorn">
+						</a>
+						<h5 style="float:right; margin-top: 300px; width: 20%;">http://14.63.199.244:8080/guruguru/</h5>	
+					</section>
+					<!-- 보시는 사진은 서버관리 대시보드입니다. 오른쪽 주소로 접속하면 실제 대시보드를 보실 수 있으십니다. 이러한 대시보드 UI를 개발하려면 어느정도 시간이 걸릴가요? 기준 데이터를 바꾸면 아래 그래프 위젯의 데이터 테이블의 데이터가 동적으로 바뀝니다. -->
+					<section>
+						<h3>ActiveX 기술 없이 모든 브라우저 동작?!</h3>
+						<img src="images/stress.png">
+						<!--
+						 앞에서 본 그러한 대시보드를 ActiveX 기술 없이 모든 브라우저에서 동작하는 UI로 개발해야 한다면요? 돈이 없어서 UI 솔루션을 살 돈도 없다면요? -->
+					</section>
+					<section>
+						<h2>UI 솔루션 살 돈도 없다?!</h2>
+						<!-- <img src="images/no-money-no-life.png"> -->
+						<img src="images/nomoney.jpg">
+						 <!-- 제 저희는 돈도 없고 인생도 없는 개발자입니다. -->
+					</section>
+					<section>
+						<h2>매번 다른 말을 하는 고객?!</h2>
+						<img src="images/customer-too-much-ask.png">
+						<!--
+						 근데 이게 다가 아니죠 진상 고객이 이래라 저래라 요구사항을 계속 바꾼다면요? 디자이너가 화면을 새로 그리고 html 소스가 바뀌고 javascript 소스 코드가 바뀌고 또 계속적으로 기능이 많아 진다면 소스 코드량이 얼마나 많아질까요? -->
+					</section>
+				</section>
 				<section>
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#" class="navigate-down">down</a>.
+						<h2>표준웹 UI 개발은 어렵다.</h2>
+						<br>
+						<ul>
+							<li>
+								<h3>요구사항의 변경이 심하다!</h3>
+							</li>
+							<li>
+								<h3>개발자 vs 기획자 vs 디자이너는 맨날 싸운다!</h3>
+							</li>
+							<li>
+								<h3>기능이 많아 질 수록 코드가 복잡하다!</h3>
+							</li>
+						</ul>
+					</section>
+					<!--
+네~ 표준웹 UI 개발은 어렵습니다. 하지만 저희는 이런 어려운 개발을 아주 쉽게 해주려 합니다. 그냥 UI 갈증을 단순히 해소시키지 않습니다. 여러분들의 이러한 어려운 점을 아주 쉬원하게~ 해소시켜드릴 것입니다. 
+					 -->
+				</section>
+
+				<section>
+					<section>
+						<h1><span class="blue">eGov</span>AngularJS</h1>
+					</section>
+					<section>
+						<!-- 2프로 부족한 부분 체크 -->
+						<img src="images/egovng-str.png" style="background:white; padding: 10px; padding-left:20px">
+					</section>
+					<section>
+						<p style="background-color: white;">
+							<img src="images/image4.png" style="box-shadow:none; border : none;">
 						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
+						<h2>양방향 데이터 바인딩</h2>
+					</section>
+
+					<section>
+						<h2>jQuery 예제</h2>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<input id="toggleShowHide" type="checkbox">
+<div id=”specialParagraph”>
+    위의 체크박스를 클릭하면 보시는 내용은 숨겨질 것입니다.
+</div>
+							</code>
+						</pre>
+<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<script>
+$(function() {
+
+ function toggle() {   
+		var isChecked = $('#toggleShowHide').is(':checked');
+		var specialParagraph = $('#specialParagraph');
+		if (isChecked) { specialParagraph.show(); } 
+		else { specialParagraph.hide();  }
+ }
+
+ $('#toggleShowHide').change(function() {
+		toggle();
+ });
+
+ toggle();
+
+});
+</script>
+							</code>
+						</pre>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
+						<h2>AngularJS 예제</h2>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<input ng-model="showSpecial" type="checkbox">
+
+<div ng-show=”showSpecial”>
+    위의 체크박스를 클릭하면 보시는 내용은 숨겨질 것입니다.
+</div>
+							</code>
+						</pre>
+						<img src="images/databinding.png" style="background:white; padding: 20px;"alt="양방향 데이터 바인딩">
 					</section>
 					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
+						<h2>MVC 구조 제공</h2>
+						<img src="images/mvc.png" style="background:white; padding: 20px;"alt="양방향 데이터 바인딩">
 					</section>
-				</section>
-
-				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? No problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slid.es" target="_blank">http://slid.es</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?#/themes">Default</a> -
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> <br>
-						<a href="?theme=moon.css#/themes">Moon</a> -
-						<a href="?theme=simple.css#/themes">Simple</a> -
-						<a href="?theme=solarized.css#/themes">Solarized</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+<section>
+						<h2>MVC 구조가 없는 코드</h2>
+						<h4>HTML</h4>
+							<pre>
+							<code data-trim contenteditable style="font-size: 18px;">
+<div id="search-panel">
+ <label>부서</label>
+ <select class="dept-dropbox"></select>
+ <label>직급</label>
+ <select class="pos-dropbox"></select>
+ <button id="sFind">검색</button>
+</div>
+<div id="gridPanel">
+ <table>
+  <thead>
+   <tr><td>사번</td><td>이름</td><td>부서</td></tr>
+  </thead>
+  <tbody></tbody>
+ </table>
+</div>
+							</code>
+						</pre>
 					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
+					<section>
+						<h2>MVC 구조가 없는 코드</h2>
+						<h4>JavaScript</h4>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+// listData를 이용하여 dropBox(select)의 option을 구성한다.
+function makeDropBox(dropbox, listData){
+ var option;
+ dropbox.options.length = 0; //초기화
+	
+ if(listData){
+  for(var i = 0, length = listData.length; i < length; i++) {
+   option = document.createElement("option");
+   option.value = listData[i].cdDetailNo;
+   option.text = listData[i].cdDetailName;
+   dropbox.options.add(option);
   }
+ }
+};
+
+var searchPanel = document.getElementById("search-panel");
+var deptDropbox = searchPanel.getElementsByClassName("dept-dropbox")[0];
+var posDropbox = searchPanel.getElementsByClassName("pos-dropbox")[0];
+var sUserId = document.getElementById("sUserId");
+var sUserNm = document.getElementById("sUserNm");
+var sFind = document.getElementById("sFind");
+
+$.ajax(urlDept)
+ .success(function(jsonData){
+  // 부서 정보 조회 후 처리
+  makeDropBox(deptDropbox, jsonData.DS_CODE);
+ });
+	
+	
+// 직급 정보 조회
+$.ajax(urlPos)
+ .success(function posCallBack(jsonData){
+  // 직급 정보 조회 후 처리
+  makeDropBox(posDropbox, jsonData.DS_CODE);
+ });
+	
+	
+// 조회버튼에 이벤트 등록
+//document.getElementById("sFind").onclick = function(){
+sFind.onclick = function(){
+ // 조회 버특 클릭 시 인사 정보 조회
+ $.ajax(urlUserList)
+  // 인사 정보 조회 후 처리
+  .success(function(jsonData){
+   // masterView를 이용하여 grid 정보 갱신
+   CommMng.userMnge.GridView.setGridData(jsonData.USER_DS);
+  });
+};
+
+var gridColumn = ["userId", "userNm", "deptCd"];
+var grid = document.getElementById("gridPanel").getElementsByTagName("table")[0];
+var gridBody = grid.children[1];
+ 
+function setGridData(listData){
+ var list = "";
+ gridData = listData;
+ if(listData){
+  for(var i = 0, length = listData.length; i < length; i++) {
+   list += "<tr>";
+   for(var j = 0, length2 = gridColumn.length; j < length2; j++) {
+    list += "<td>";
+    list += listData[i][gridColumn[j]] || " ";
+    list += "</td>";
+   }
+   list += "</tr>";
+  }
+	}
+
+ gridBody.innerHTML = list; // 값 변경
+};
+</code>
+</pre>
+					</section>
+					
+					<section>
+						<h3>MVC 구조화된 코드</h3>
+								<h5>HTML (Template)</h5>
+							<pre>
+							<code data-trim contenteditable style="font-size: 18px;">
+<div ng-controller="userMgtCtr">
+<div>
+ <label>부서</label>
+ <select ng-model="sObj.deptId" ng-options="d.deptId as d.deptNm for d in deptList">
+ </select>
+ <label>직급</label>
+ <select ng-model="sObj.posId"
+ 	ng-options="p.posId as p.posNm for p in posList">
+ </select>
+ <button ng-click="find(sObj)">검색</button>
+</div>
+<div>
+ <table>
+  <thead>
+   <tr><td>사번</td><td>이름</td><td>부서</td></tr>
+  </thead>
+  <tbody>
+   <tr ng-repeat="user in userList">
+    <td>{{userId}}</td><td>{{userNm}}</td><td>{{userNm}}</td>
+   </tr>
+  </tbody>
+ </table>
+</div>
+</div>
+							</code>
+						</pre>
+					</section>
+				<section>
+						<h2>MVC 구조화된 코드</h2>
+						<h4>JavaScript (Controller)</h4>
+							<pre>
+							<code data-trim contenteditable style="font-size: 18px;">
+function userMgtCtr ($scope,$http) {
+ $scope.deptList = [
+  { deptId: '001', deptNm: '부서A'},
+  { deptId: '002', deptNm: '부서B'}
+ ];
+
+ $scope.posList = [
+  { posId: '001', posNm: '사원'},
+  { posId: '002', posNm: '대리'}
+ ];
+
+ $scope.find = function (sObj) {
+  $http({
+   method: 'GET', url: 'getUserList',
+   params: { deptId: sObj.deptId, posId: sObj.posId }
+  })
+   .success(function(data, status, headers, config) {
+    response.data = $scope.userList;
+   });
+ };
 }
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+							</code>
+						</pre>
+					</section>
+
 				</section>
 
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
 
 				<section>
+			
 					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
+						<h2>다양한 UI 컴포넌트 제공</h2>
+								<img src="images/egovAngularJScomponents.png">
 					</section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>아주 쉬운 UI 컴포넌트 사용</h2>
+						<img src="images/easy.jpg" alt="아주 쉽게 UI 컴포넌트를 사용할 수 있다.">
+					</section>
+					<section  style="padding: 0px;">
+						<h3> - 그리드 컴포넌트 - </h3>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px">
+<div egov-grid name="demoGrid" dataset="userList">
+  <table>
+    <thead>
+      <tr>
+        <th>이름</th> <th>이메일</th> <th>등록일</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{name}}</td> <td>{{email}}</td> <td>{{regDate}}</td>
+      </tr>
+    </tbody>
+  </table>    
+</div></code>
+						</pre>
+						<pre style="margin: 0px auto;">
+							<code data-trim contenteditable style="font-size: 18px; padding">
+function demoCtrl ($scope) {
+ $scope.userList = [
+  { name: "재도", email: "haibane@gmail.com", regDate: "20130910"},
+  { name: "재하", email: "jeaha@gmail.com", regDate: "20130910" },
+  { name: "지수", email: "jisu@gmail.com", regDate: "20130910" },
+  { name: "한행", email: "hanhang@gmail.com", regDate: "20130910" }
+ ];
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<a href="http://localhost:8001/doc/#!/grid1">
+							<img src="images/egovGrid.png">
+						</a>
+					</section>
+					<section>
+						<h3> - 차트 컴포넌트 - </h3>
+<pre>
+<code data-trim contenteditable style="font-size: 18px; margin-top: 20px">
+<div egov-line-chart data="myData" id="myData"
+ height="280" width="600" showXAxis="true" showYAxis="true" showLegend="true"
+ >
+ <svg></svg>
+</div>
+</code>
+</pre>
+						<pre style="margin: 0px auto;">
+							<code data-trim contenteditable style="font-size: 18px; padding">
+function demoCtrl ($scope) {
+ //차트 데이터 등록
+ $scope.myData = [
+  {"key": "data_1", "values": [[0,68],[1,91],[2,57],[3,87],[4,79],[5,21],[6,51],[7,10],[8,11],[9,33]]},
+  {"key": "data_2", "values": [[0,61],[1,99],[2,90],[3,92],[4,67],[5,68],[6,40],[7,54],[8,62],[9,83]]}
+ ]; 
+}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<a href="http://localhost:8001/doc/#!/chart1">
+							<img src="images/chart.png">
+						</a>
+					</section>
+					<section>
+						<h2>개발을 쉽게 도와주는 <br><br> <span class="blue">개발자 사이트</span> 제공</h2>
+						<a href="http://localhost:8001/doc/" target="_blank">
+							<img src="images/image2.png">
+						</a>
 					</section>
 				</section>
-
 				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
+					<h1>DEMO</h1>
 				</section>
-
+				<!-- 아주 쉽게 그리드가 만들어지고 데이터가 바뀌어도 자동으로 화면이 바뀌죠? -->
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
+					<h1>한 가지 더!</h1>
 				</section>
-
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
+					<h1>Cross Browsing Test</h1>
+					<!-- 하지만 이게 다가 아닙니다. 한가지 더! 있습니다. 바로 크로스 브라우징 테스트 입니다. -->
 				</section>
-
 				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
-				</section>
+					<!-- 아까 보셨던 대시보드 기억 나시죠? 벌써 까먹진 않으 셨죠? 그 대시보드를 모든 브라우저별로 잘 동작하나 테스트 해보는 것입니다. 그럴려면 테스트 시나리오를 작성해야겠죠?
+		
+					 -->
+					 <!-- 테스트 시나리오 1 -->
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
 
+					 </code>
+					</pre>
+					 <!-- 테스트 시나리오 2 -->
+					 <!-- 카르마 테스트 -->
+					 <!-- 이렇게 테스트가 실행되게 됩니다. 이러한 테스트를 젠킨스에 연동하여 CI또한 구성이 가능합니다. 이러한 내용을 저희 개발자 사이트에 작성을 해놓았습니니다. 바로 집에가셔서 적용해보실 수 있으십니다. -->
+				</section>
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
-
+					<img src="images/iwantyou.gif">
+					<h1>I want your code!</h1>
+					<a href="https://github.com/eGovAngularJS">https://github.com/eGovAngularJS</a>
+					<!-- i want you 사진 -->
+					<!-- 네 마지막으로 한마디만 더하겠습니다. 저희는 오픈소스 프로젝트 입니다. 모든 소스는 깃헙에 올라 가있습니다. 그러니 누구든 참여가 가능합니다. 네 저희는 여러분들의 도음이 필요합니다. 같이 함께 만들어 봐요! -->
+				</section> 
+				<section>
+					<h1>4번! 뽑아주세요!</h1>
+					<!-- 아! 4번 뽑는 것 도 잊지 말아주세요! -->
+					<!-- 안 뽑아주시면 프로젝트 날려버릴 것니다. -->
+				</section> 
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
-
 		<script>
-
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				controls: true,
 				progress: true,
 				history: true,
 				center: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
-
-				// Optional libraries used to extend on reveal.js
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
 				dependencies: [
 					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
 					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
 			});
-
 		</script>
-
 	</body>
 </html>
