@@ -40,19 +40,19 @@
 					</p>
 				</section>
 
-				<!-- 전자정부 프레임워크를 사용하면서 갈증을 느끼지 않으셨습니다? UI 갈증을 느끼지 않으 셨어요? 저희 팀은 여러분들의 이러한 갈증을 해소하고자 eGovAngularJS를 시작하였습니다. -->
+				<!-- 전자정부 프레임워크를 사용하면서 몬가 2% 부족함을 느끼지 않으셨습니다? UI의 갈증을 느끼지 않으 셨어요? 저희 팀은 여러분들의 이러한 갈증을 해소하고자 eGovAngularJS를 시작하였습니다. -->
 				<section>
 					<h3>표준프레임워크에 2% 부족함을 채우다.</h3>
 					<img src="images/2percent-1.png">
 				</section>
 				<section>
 					<section>					
-						<a style="float:left" href="http://localhost:8080/guru/" target="_blank">
-							<img src="images/image1.png" alt="Unicorn">
+						<a style="float:left" href="http://localhost:8080/guru/" target="_blank" style="width:600px">
+							<img src="images/dashboard.png" alt="Unicorn">
 						</a>
-						<h5 style="float:right; margin-top: 300px; width: 40%;">http://14.63.199.244:8080/guruguru/</h5>	
+						<h5 style="float:right; margin-top: 300px; width: 20%;">http://14.63.199.244:8080/guruguru/</h5>	
 					</section>
-					<!-- 보시는 사진은 서버관리 대시보드입니다. 아래 주소로 접속하면 실제 접속하여 보실 수 있으십니다. 이러한 대시보드 UI를 개발하려면 어느정도 시간이 걸릴가요? 기준 데이터를 바꾸면 아래 그래프 위젯의 데이터 테이블의 데이터가 동적으로 바뀝니다. -->
+					<!-- 보시는 사진은 서버관리 대시보드입니다. 오른쪽 주소로 접속하면 실제 대시보드를 보실 수 있으십니다. 이러한 대시보드 UI를 개발하려면 어느정도 시간이 걸릴가요? 기준 데이터를 바꾸면 아래 그래프 위젯의 데이터 테이블의 데이터가 동적으로 바뀝니다. -->
 					<section>
 						<h3>ActiveX 기술 없이 모든 브라우저 동작?!</h3>
 						<img src="images/stress.png">
@@ -96,12 +96,10 @@
 				<section>
 					<section>
 						<h1><span class="blue">eGov</span>AngularJS</h1>
-						<h1></h1>
 					</section>
 					<section>
-						<a href="http://localhost:8001/doc/"></a>
 						<!-- 2프로 부족한 부분 체크 -->
-						<img src="images/image3.png">
+						<img src="images/egovng-str.png" style="background:white; padding: 10px; padding-left:20px">
 					</section>
 					<section>
 						<p style="background-color: white;">
@@ -110,9 +108,53 @@
 					</section>
 					<section>
 						<h2>양방향 데이터 바인딩</h2>
-						<!--
-							데이터 변경을 감지하는 코드 -> 데이터 바인딩되어 바뀌는 코드
-						-->
+					</section>
+
+					<section>
+						<h2>jQuery 예제</h2>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<input id="toggleShowHide" type="checkbox">
+<div id=”specialParagraph”>
+    위의 체크박스를 클릭하면 보시는 내용은 숨겨질 것입니다.
+</div>
+							</code>
+						</pre>
+<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<script>
+$(function() {
+
+ function toggle() {   
+		var isChecked = $('#toggleShowHide').is(':checked');
+		var specialParagraph = $('#specialParagraph');
+		if (isChecked) { specialParagraph.show(); } 
+		else { specialParagraph.hide();  }
+ }
+
+ $('#toggleShowHide').change(function() {
+		toggle();
+ });
+
+ toggle();
+
+});
+</script>
+							</code>
+						</pre>
+					</section>
+					<section>
+						<h2>AngularJS 예제</h2>
+						<pre>
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+								<input ng-model="showSpecial" type="checkbox">
+
+<div ng-show=”showSpecial”>
+    위의 체크박스를 클릭하면 보시는 내용은 숨겨질 것입니다.
+</div>
+							</code>
+						</pre>
+						<img src="images/Two_Way_Data_Binding.png" alt="양방향 데이터 바인딩">
 					</section>
 					<section>
 						<h2>MVC 구조 제공</h2>
@@ -133,67 +175,55 @@
 						</p>
 					</section>
 					<section>
-						<h2>아주 쉽게 UI 컴포넌트를 사용할 수 있다.</h2>
-						<!-- 아주 쉬워요 이미지 -->
+						<h2>아주 쉬운 UI 컴포넌트 사용</h2>
+						<img src="images/easy.jpg" alt="아주 쉽게 UI 컴포넌트를 사용할 수 있다.">
 					</section>
-					<section>
+					<section  style="padding: 0px;">
 						<h3> - 그리드 컴포넌트 - </h3>
-						<h5>(html)</h5>
 						<pre>
-							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px">
 <div egov-grid name="demoGrid" dataset="userList">
   <table>
     <thead>
       <tr>
-        <th>이름</th> <th>이메일</th>
-        <th>등록일</th>
+        <th>이름</th> <th>이메일</th> <th>등록일</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>{{name}}</td>
-        <td>{{email}}</td>
-        <td>{{regDate}}</td>
+        <td>{{name}}</td> <td>{{email}}</td> <td>{{regDate}}</td>
       </tr>
     </tbody>
   </table>    
 </div></code>
 						</pre>
-					</section>
-					<section>
-						<h3> - 그리드 컴포넌트 - </h3>
-						<h5>(javascript)</h5>
-						<pre>
-							<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+						<pre style="margin: 0px auto;">
+							<code data-trim contenteditable style="font-size: 18px; padding">
 function demoCtrl ($scope) {
-	$scope.userList = [{
-	    id: "haibane",
-	    name: "재도",
-	    email: "haibane@gmail.com",
-	    regDate: "20130910"
-	}, {
-	    id: "jeaha",
-	    name: "재하",
-	    email: "jeaha@gmail.com",
-	    regDate: "20130910"
-	}, {
-	    id: "jisu",
-	    name: "지수",
-	    email: "jisu@gmail.com",
-	    regDate: "20130910"
-	}, {
-	    id: "hanhang",
-	    name: "한행",
-	    email: "hanhang@gmail.com",
-	    regDate: "20130910"
-	}];
+ $scope.userList = [{ 
+  name: "재도",
+  email: "haibane@gmail.com",
+  regDate: "20130910"
+ },{
+  name: "재하",
+  email: "jeaha@gmail.com",
+  regDate: "20130910"
+ }, {
+  name: "지수",
+  email: "jisu@gmail.com",
+  regDate: "20130910"
+ }, {
+  name: "한행",
+  email: "hanhang@gmail.com",
+  regDate: "20130910"
+ }];
 }
 							</code>
 						</pre>
 					</section>
 					<section>
 						<a href="http://localhost:8001/examples/grid/ex1.html">
-							<img src="images/image6.png">
+							<img src="images/egovGrid.png">
 						</a>
 					</section>
 					<section>
