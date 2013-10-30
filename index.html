@@ -370,7 +370,7 @@ function demoCtrl ($scope) {
 						</pre>
 					</section>
 					<section>
-						<a href="http://localhost:8001/doc/#!/grid1">
+						<a href="http://localhost:8001/doc/#!/grid1" target="_blank">
 							<img src="images/egovGrid.png">
 						</a>
 					</section>
@@ -398,13 +398,13 @@ function demoCtrl ($scope) {
 						</pre>
 					</section>
 					<section>
-						<a href="http://localhost:8001/doc/#!/chart1">
+						<a href="http://localhost:8001/doc/#!/chart1" target="_blank">
 							<img src="images/chart.png">
 						</a>
 					</section>
 					<section>
 						<h2>개발을 쉽게 도와주는 <br><br> <span class="blue">개발자 사이트</span> 제공</h2>
-						<a href="http://localhost:8001/doc/" target="_blank">
+						<a href="http://egov.angularjs.or.kr/doc/" target="_blank">
 							<img src="images/image2.png">
 						</a>
 					</section>
@@ -421,19 +421,62 @@ function demoCtrl ($scope) {
 					<!-- 하지만 이게 다가 아닙니다. 한가지 더! 있습니다. 바로 크로스 브라우징 테스트 입니다. -->
 				</section>
 				<section>
+					<section>
 					<!-- 아까 보셨던 대시보드 기억 나시죠? 벌써 까먹진 않으 셨죠? 그 대시보드를 모든 브라우저별로 잘 동작하나 테스트 해보는 것입니다. 그럴려면 테스트 시나리오를 작성해야겠죠?
-		
-					 -->
 					 <!-- 테스트 시나리오 1 -->
+					 <h4>시나리오 1</h4>
 					<pre>
 						<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+describe('대시보드 화면', function () {
+ beforeEach(function () {
+  browser().navigateTo('/');
+ });
 
+ it('타이틀이 포함된다.', function () {
+  expect(element('.page-title').text())
+   .toBe('eGov AngularJS Dashboard  easy and fun');
+ });
+
+ it('각 위젯들에 알맞는 컴포넌트가 포함된다.', function () {
+  var svcStatusWidget = element('widget[title="서버 상태 정보"] [egov-easy-pie-chart]');
+  var periodSearchWidget = element('widget form[name="periodSearchForm"]');
+  var userConnWidget = element('widget[title="사용자 접속"] [egov-line2]');
+  var locationConnWidget = element('widget[title="지역별 접속율"] [egov-grid]');
+
+  expect(svcStatusWidget.count()).toBe(4);
+  expect(periodSearchWidget.count()).toBe(1);
+  expect(userConnWidget.count()).toBe(1);
+  expect(locationConnWidget.count()).toBe(1);
+ });
+});
 					 </code>
 					</pre>
-					 <!-- 테스트 시나리오 2 -->
-					 <!-- 카르마 테스트 -->
-					 <!-- 이렇게 테스트가 실행되게 됩니다. 이러한 테스트를 젠킨스에 연동하여 CI또한 구성이 가능합니다. 이러한 내용을 저희 개발자 사이트에 작성을 해놓았습니니다. 바로 집에가셔서 적용해보실 수 있으십니다. -->
+					</section>
+				<section>
+					<!-- 아까 보셨던 대시보드 기억 나시죠? 벌써 까먹진 않으 셨죠? 그 대시보드를 모든 브라우저별로 잘 동작하나 테스트 해보는 것입니다. 그럴려면 테스트 시나리오를 작성해야겠죠?
+					 <!-- 테스트 시나리오 1 -->
+					 <h4>시나리오 2</h4>
+					<pre>
+						<code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+it('검색 기준을 일자로 바꾸면 일자를 선택할 수 있는 콤보박스가 보인다.', function () {
+ element(':button.day').click();
+ expect(element('select[egov-select-list="monthList"]').count()).toBe(1);
+});
+
+it('검색 기준을 일자로 바꾸면 일자를 선택할 수 있는 콤보박스가 보인다.', function () {
+ var gridSelector = 'div[name="demoGrid2"] .grid-canvas .slick-row:first';
+ select('year').option('2012');
+ element('button[type="submit"]').click();
+ expect(element(gridSelector + ' .slick-cell.l0.r0').text())
+  .toBe('강원');
+ expect(element(gridSelector + ' .slick-cell.l1.r1').text())
+  .toBe('642');
+});
+					 </code>
+					</pre>
 				</section>
+				</section>
+<!-- 이렇게 테스트가 실행되게 됩니다. 이러한 테스트를 젠킨스에 연동하여 CI또한 구성이 가능합니다. 이러한 내용을 저희 개발자 사이트에 작성을 해놓았습니니다. 바로 집에가셔서 적용해보실 수 있으십니다. -->
 				<section>
 					<img src="images/iwantyou.gif">
 					<h1>I want your code!</h1>
