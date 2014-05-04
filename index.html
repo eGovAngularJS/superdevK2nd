@@ -42,7 +42,7 @@
 					<h3>Directive(지시자) 개발</h3>
 					<br>
 					<p>
-						<a href="https://plus.google.com/111326406112009421991">고재도</a>@<a href="https://plus.google.com/communities/109067040035659120428">GDG Korea WebTech</a>
+						고재도@GDG Korea WebTech
 					</p>
 				</section>
 
@@ -132,7 +132,7 @@
 				<section>
 					<h1>지시자란?</h1>
 					<p>
-						directives are <b style="background: #ff5e99;">markers</b> on a DOM element (such as an attribute, element name, or CSS class) that tell AngularJS's HTML compiler ($compile) to <b style="background: #ff5e99;">attach a specified behavior to that DOM element or even transform the DOM element</b> and its children. (from AngularJS Officail DOC)
+						directives are markers on a DOM element (such as an attribute, element name, or CSS class) that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element or even transform the DOM element and its children. (from AngularJS Officail DOC)
 					</p>
 				</section>
 				
@@ -187,6 +187,35 @@ angular.module('demo', []).
 					<section>
 						<h3>페널을 만들어 봐요.</h3>	
 					</section>
+					<section>
+<pre style="margin: 0px auto;">
+	<code data-trim contenteditable style="font-size: 18px; padding">
+&lt;body&gt;
+ &lt;panel title=&quot;&#xc548;&#xb155;&#xd558;&#xc138;&#xc694;&quot; contents=&quot;&#xc548;&#xb155;?&quot;&gt;&lt;/panel&gt;
+ &lt;panel title=&quot;&#xc548;&#xb155;&#xd558;&#xc138;&#xc694;4&quot; contents=&quot;&#xc548;&#xb155;?&quot;&gt;&lt;/panel&gt;
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+angular.module(&#039;demo&#039;, [])
+ .directive(&#039;panel&#039;, [&#039;$log&#039;, function($log){
+  return {
+   scope: {
+    title :&quot;@&quot;,
+    contents:&quot;@&quot;
+   },
+   restrict: &#039;AE&#039;,
+   templateUrl: &#039;panel.tmpl.html&#039;,
+   link: function($scope, iElm, iAttrs, controller) {
+    jQuery(iElm).find(&#039;.panel-heading&#039;)
+     .click(function() {	
+      jQuery(iElm).find(&#039;.panel-body&#039;).toggle();
+     });
+   }
+  };
+ }]);
+&lt;/script&gt;
+	</code>
+</pre>					
+					</section>
 				</section>
 				<section>
 					<section>
@@ -198,14 +227,62 @@ angular.module('demo', []).
 							<img src="images/gdg/sparkline.png">
 						</a>
 					</section>
+					<section>
+<pre style="margin: 0px auto;">
+	<code data-trim contenteditable style="font-size: 18px; padding">
+&lt;body ng-controller=&quot;demoCtrl&quot;&gt;
+	&lt;sparkline data=&quot;array&quot;&gt;&lt;/sparkline&gt;
+	&lt;button ng-click=&quot;change()&quot;&gt;change Data&lt;/button&gt;
+&lt;/body&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+angular.module(&#039;demo&#039;, [])
+ .controller(&#039;demoCtrl&#039;,function  ($scope) {
+  $scope.array = [10,8,5,7,4,4,1,10,8,5,7,4,4];
+  $scope.change = function () {
+   $scope.array = [1,2,3,2,4,2,10,1,2,9,2,1,10];
+  }
+ })
+ .directive(&#039;sparkline&#039;, [&#039;$log&#039;, function($log){
+ return {
+  scope: {
+   data : &quot;=&quot;
+  },
+  restrict: &#039;AE&#039;,
+  link: function($scope, iElm, iAttrs, controller) {
+   $scope.$watch(function (newData, beforeData) {
+    $(iElm).sparkline(newData.data);
+   });
+  }
+ };
+ }]);
+&lt;/script&gt;
+	</code>
+</pre>
+					</section>
 				</section>
 
 				<section>
-					
 					<a href="http://ngmodules.org/" target="_blank">
 						<h2>많은 외부 모듈</h2>
 						<h4>(UI 컴포넌트 포함)</h4>
 						<img src="images/gdg/angularmodule.png" style="height:400px;">
+					</a>
+				</section>
+
+				<section>
+					<img src="images/gdg/superk2.jpg" style="height:500px;">
+					<h2>eGovAngularJS 프로젝트</h2>
+				</section>
+
+				<section>
+					<h2>다양한 UI 컴포넌트 제공</h2>
+					<img src="images/egovAngularJScomponents.png">
+				</section>
+
+				<section>
+					<h2>개발을 쉽게 도와주는 <br><br> <span class="blue">개발자 사이트</span> 제공</h2>
+					<a href="http://egov.angularjs.or.kr/doc/" target="_blank">
+						<img src="images/image2.png">
 					</a>
 				</section>
 
